@@ -4,3 +4,4 @@ services:
     env: node
     buildCommand: "yarn install"
     startCommand: "yarn start"
+    rootDir: indie-playlist-frontend
