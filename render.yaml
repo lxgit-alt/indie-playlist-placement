@@ -4,5 +4,3 @@ services:
     env: node
     buildCommand: "yarn install"
     startCommand: "yarn start"
-    branches: 
-      - main
