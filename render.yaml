@@ -1,6 +1,6 @@
 services:
   - type: web
     name: indie-playlist-frontend
-    rootDir: indie-playlist-frontend  # Remove any extra period or incorrect path
+    rootDir: .  # Set to current directory (do NOT include "indie-playlist-frontend")
     buildCommand: yarn install && yarn build
-    startCommand: cd indie-playlist-frontend && yarn start
+    startCommand: yarn start
