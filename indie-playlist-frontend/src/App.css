@@ -1,46 +1,63 @@
-.App {
-  text-align: center;
+/* Updated CSS with Gradient UI Elements */
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  background-color: #f5f5dc; /* Warm beige background */
+  color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
+  background: linear-gradient(45deg, #ff8c00, #ff4500); /* Burnt orange gradient */
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button:hover {
+  background: linear-gradient(45deg, #ff4500, #ff8c00); /* Reverse gradient */
+  transform: scale(1.05); /* Slight zoom effect */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.button-secondary {
+  background: linear-gradient(45deg, #6a0dad, #ff00ff); /* Purple to magenta */
+}
+
+.button-secondary:hover {
+  background: linear-gradient(45deg, #ff00ff, #6a0dad);
+}
+
+/* Additional UI Enhancements */
+.card {
+  background: linear-gradient(135deg, #f5f5dc, #ffebcd); /* Soft beige gradient */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  background: linear-gradient(90deg, #ff8c00, #ff4500);
+  padding: 15px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 18px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar a:hover {
+  text-decoration: underline;
 }
 
-.login-container {
-  margin-top: 50px;
-}
-
-.upload-container {
-  margin-top: 50px;
+/* Haileti-style Wave for Hero Section */
+.hero {
+  background: url('data:image/svg+xml,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%23cc5500" fill-opacity="1" d="M0,256L40,266.7C80,277,160,299,240,277.3C320,256,400,192,480,192C560,192,640,256,720,266.7C800,277,880,235,960,186.7C1040,139,1120,85,1200,106.7C1280,128,1360,224,1400,272L1440,320L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>');
+  background-size: cover;
 }
