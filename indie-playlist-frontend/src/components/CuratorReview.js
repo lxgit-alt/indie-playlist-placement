@@ -11,7 +11,7 @@ const CuratorReview = () => {
 
   const fetchTracks = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/curator/review');
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/curator/review`);
       setTracks(response.data);
     } catch (error) {
       console.error('Error fetching tracks:', error);
@@ -24,7 +24,7 @@ const CuratorReview = () => {
 
   const submitFeedback = async (trackId, accepted) => {
     try {
-      await axios.post(`http://localhost:5000/curator/review/${trackId}`, {
+      await axios.post(`${process.env.REACT_APP_API_URL}/curator/review/${trackId}`, {
         feedback: feedback[trackId] || '',
         accepted,
       });
@@ -45,7 +45,7 @@ const CuratorReview = () => {
           <div key={track.id} className="track-card">
             <h3>{track.trackName} - {track.artist}</h3>
             <audio controls>
-              <source src={`http://localhost:5000/${track.filePath}`} type="audio/mp3" />
+              <source src={`${process.env.REACT_APP_API_URL}/${track.filePath}`} type="audio/mp3" />
               Your browser does not support the audio tag.
             </audio>
             <textarea
