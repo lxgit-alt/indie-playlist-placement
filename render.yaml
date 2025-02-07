@@ -1,6 +1,6 @@
 services:
   - type: web
     name: indie-playlist-frontend
-    rootDir: ./indie-playlist-frontend  # Use relative path
+    rootDir: ./indie-playlist-frontend  # Make sure this is set
     buildCommand: yarn install && yarn build
-    startCommand: yarn start
+    startCommand: cd indie-playlist-frontend && yarn start
