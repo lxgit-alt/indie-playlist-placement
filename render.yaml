@@ -1,7 +1,6 @@
 services:
   - type: web
     name: indie-playlist-frontend
-    env: node
-    buildCommand: "yarn install"
-    startCommand: "yarn start"
-    rootDir: indie-playlist-frontend  # This points to the frontend folder
+    rootDir: ./indie-playlist-frontend  # Use relative path
+    buildCommand: yarn install && yarn build
+    startCommand: yarn start
