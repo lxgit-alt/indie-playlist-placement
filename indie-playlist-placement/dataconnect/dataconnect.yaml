@@ -1,0 +1,12 @@
+specVersion: "v1beta"
+serviceId: "indie-playlist-placement"
+location: "us-central1"
+schema:
+  source: "./schema"
+  datasource:
+    postgresql:
+      database: "fdcdb"
+      cloudSql:
+        instanceId: "indie-playlist-placement-fdc"
+      # schemaValidation: "COMPATIBLE"
+connectorDirs: ["./connector"]
