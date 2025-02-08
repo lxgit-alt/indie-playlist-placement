@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import Login from './components/Login';
 import UploadTrack from './components/UploadTrack';
 import CuratorReview from './components/CuratorReview';
+import './App.css'; // ✅ Import the CSS file
 
 const App = () => {
   return (
