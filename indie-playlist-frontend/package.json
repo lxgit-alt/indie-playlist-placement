@@ -8,14 +8,14 @@
     "cra-template": "1.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "6",
+    "react-router-dom": "^6.29.0",
     "react-scripts": "^5.0.1",
     "typescript": "^5.7.3",
     "web-vitals": "^4.2.4",
     "yargs-parser": "^21.1.1"
   },
   "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
