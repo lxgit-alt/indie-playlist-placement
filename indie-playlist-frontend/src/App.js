@@ -4,7 +4,7 @@ import Login from './components/Login';
 import UploadTrack from './components/UploadTrack';
 import CuratorReview from './components/CuratorReview';
 import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+import Footer from './components/Footer.js';
 import './App.css';
 
 const App = () => {
