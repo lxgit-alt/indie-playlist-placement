@@ -1,5 +1,5 @@
 import React from "react";
-import retroSunsetBg from "./retro-sunset-bg.png"; // Import the image
+import retroSunsetBg from '../images/retro-sunset-bg.png';  // Updated to the new path
 import "./Hero.css";
 
 const Hero = () => {
