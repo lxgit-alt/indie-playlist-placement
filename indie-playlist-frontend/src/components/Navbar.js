@@ -1,25 +1,23 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import "./Navbar.css"; // ✅ Importing the updated styles
+import "./Navbar.css";
 
 const Navbar = ({ toggleDarkMode }) => {
   return (
     <nav className="navbar">
-      <h1 className="logo">🎵 Indie Playlist Placement</h1>
-      <ul>
+      <div className="logo">🎵 Indie Playlist Placement</div>
+      <ul className="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/submit">Submit Music</a></li>
+        <li><a href="/curators">Curators</a></li>
+        <li><a href="/pricing">Pricing</a></li>
+        <li><a href="/login" className="btn-nav">Login</a></li>
+        {/* 🌙 Dark Mode Toggle Button */}
         <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/upload">Upload</Link>
-        </li>
-        <li>
-          <Link to="/curator">Curator</Link>
+          <button className="btn-darkmode" onClick={toggleDarkMode}>
+            🌙 Dark Mode
+          </button>
         </li>
       </ul>
-      <button className="dark-mode-toggle" onClick={toggleDarkMode}>
-        🌙 Toggle Dark Mode
-      </button>
     </nav>
   );
 };

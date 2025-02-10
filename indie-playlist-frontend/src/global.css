@@ -1,0 +1,83 @@
+/* Global Styles for Indie Playlist Placement */
+
+/* 1. Define color variables */
+:root {
+    --primary-bg: #f5e1c8;  /* Beige */
+    --accent-color: #ff6b35; /* Burnt orange */
+    --pastel-purple: #b49fcc;
+    --pastel-blue: #8fc1e3;
+    --gradient-main: linear-gradient(45deg, #ff6b35, #b49fcc);
+    --text-color: #2c2c2c;
+  }
+  
+  /* 2. Global Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  /* 3. Background & Layout */
+  body {
+    background: var(--primary-bg);
+    color: var(--text-color);
+  }
+  
+  /* 4. Buttons */
+  .btn {
+    background: var(--gradient-main);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .btn:hover {
+    filter: brightness(1.2);
+  }
+  
+  /* 5. Section Headings */
+  h1, h2, h3 {
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+  
+  /* 6. Neon Glow Effects */
+  .neon-text {
+    color: white;
+    text-shadow: 0px 0px 5px var(--pastel-purple), 0px 0px 10px var(--pastel-blue);
+  }
+  
+  /* 7. Gradient Borders */
+  .card {
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+  }
+  
+  .card:hover {
+    border-image: var(--gradient-main) 1;
+  }
+  /* Dark Mode */
+.dark-mode {
+    background: #1e1e1e;
+    color: white;
+  }
+  
+  .dark-mode .navbar {
+    background: var(--pastel-purple);
+  }
+  
+  .dark-mode .btn-nav {
+    border-color: white;
+    color: white;
+  }
+  

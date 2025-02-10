@@ -1,23 +1,57 @@
-/* 🛠 General Navbar Styling */
+/* Navbar Styles */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-}
-
-/* 🌟 Add a cool neon glow effect */
-.navbar a {
-    color: #fff;
-    text-decoration: none;
+    background: var(--gradient-main);
+    padding: 15px 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 20px;
     font-weight: bold;
-    transition: all 0.3s ease-in-out;
-}
-
-.navbar a:hover {
-    text-shadow: 0px 0px 15px #ff00ff;
-    color: #00ffff;
-}
+    color: white;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li {
+    display: inline;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+  }
+  
+  .nav-links a:hover {
+    text-shadow: 0px 0px 10px var(--pastel-blue);
+  }
+  
+  /* Neon Button */
+  .btn-nav {
+    background: transparent;
+    border: 2px solid white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  
+  .btn-nav:hover {
+    background: white;
+    color: var(--accent-color);
+    text-shadow: none;
+  }
+  

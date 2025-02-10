@@ -1,0 +1,53 @@
+.upload-container {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #f9f5ec;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .upload-container h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: #d97706;
+    margin-bottom: 20px;
+  }
+  
+  .upload-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .upload-container label {
+    font-weight: bold;
+    margin: 10px 0 5px;
+  }
+  
+  .upload-container input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .upload-container button {
+    margin-top: 15px;
+    padding: 10px;
+    background: linear-gradient(45deg, #ff00ff, #00ffff);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .upload-container button:hover {
+    background: linear-gradient(45deg, #00ffff, #ff00ff);
+  }
+  
+  .upload-container p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+  }
+  
