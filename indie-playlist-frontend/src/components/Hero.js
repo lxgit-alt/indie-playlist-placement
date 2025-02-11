@@ -3,10 +3,7 @@ import "./Hero.css";
 
 const Hero = () => {
   return (
-    <section
-      className="hero"
-      style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/retro-sunset-bg.png)` }} // Correct public folder path
-    >
+    <section className="hero">
       <div className="hero-content">
         <h1 className="neon-text">Get Your Music on the Best Indie Playlists</h1>
         <p>Connect with top Spotify curators and grow your audience.</p>
