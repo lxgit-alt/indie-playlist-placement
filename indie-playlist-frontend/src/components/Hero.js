@@ -1,5 +1,5 @@
 import React from "react";
-import backgroundImage from '../images/retro-sunset-bg.png';
+import bg from '/src/images/retro-sunset-bg.png';
 import "./Hero.css";
 
 const Hero = () => {
