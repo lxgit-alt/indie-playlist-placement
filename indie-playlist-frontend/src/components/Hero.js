@@ -1,12 +1,11 @@
 import React from "react";
-import bg from '/src/images/retro-sunset-bg.png';
 import "./Hero.css";
 
 const Hero = () => {
   return (
     <section
       className="hero"
-      style={{ backgroundImage: `url(${retroSunsetBg})` }} // Set the background image here
+      style={{ backgroundImage: `url('/retro-sunset-bg.png')` }} // Use public folder path
     >
       <div className="hero-content">
         <h1 className="neon-text">Get Your Music on the Best Indie Playlists</h1>
