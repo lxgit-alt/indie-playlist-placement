@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section
       className="hero"
-      style={{ backgroundImage: `url('/retro-sunset-bg.png')` }} // Use public folder path
+      style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/retro-sunset-bg.png)` }} // Correct public folder path
     >
       <div className="hero-content">
         <h1 className="neon-text">Get Your Music on the Best Indie Playlists</h1>
