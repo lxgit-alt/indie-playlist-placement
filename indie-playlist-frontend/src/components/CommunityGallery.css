@@ -1,0 +1,18 @@
+/* src/components/CommunityGallery.css */
+.community-gallery {
+    padding: 60px 20px;
+    background: #fff;
+    text-align: center;
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .gallery-grid img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  

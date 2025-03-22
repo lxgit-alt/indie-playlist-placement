@@ -1,0 +1,207 @@
+/* src/components/Dashboard.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+.dashboard {
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  background: url('../assets/dashboard-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.dashboard::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+.dashboard.artist::before {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.dashboard.curator::before {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Header Styling */
+.dashboard-header {
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 2px solid #1db954;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.dashboard-header.artist {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.dashboard-header.curator {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.dashboard-header h1 {
+  font-size: 2.8rem;
+  margin: 0;
+}
+
+.dashboard-header p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+/* Profile Info Styling for Artists */
+.profile-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+  border: 2px solid #1db954;
+}
+
+.profile-name {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+/* Notification banner for curators */
+.curator-notification {
+  margin-top: 20px;
+  padding: 10px;
+  background: rgba(29, 185, 84, 0.2);
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #1db954;
+}
+
+/* Tabs Styling */
+.dashboard-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.85);
+  animation: slideDown 0.5s ease-out;
+}
+
+.dashboard.artist .tab-button {
+  border-color: #FFCE32;
+}
+
+.dashboard.curator .tab-button {
+  border-color: #1D63FF;
+}
+
+.tab-button {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #1db954;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: background 0.3s, transform 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 5px;
+}
+
+.tab-button:hover {
+  background: #1db954;
+  transform: scale(1.05);
+  color: #fff;
+}
+
+.tab-button.active {
+  background: #1db954;
+  color: #fff;
+}
+
+/* Icon Styling */
+.icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  transition: transform 0.3s ease-in-out;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
+
+/* Content Area Styling */
+.dashboard-content {
+  max-width: 900px;
+  margin: 20px auto;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Simple keyframe animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Tabs Styling */
+.dashboard-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.85);
+  animation: slideDown 0.5s ease-out;
+}
+
+.tab-button {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #1db954;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: transform 0.3s ease-in-out, background 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 5px;
+}
+
+.tab-button:hover {
+  background: #1db954;
+  transform: scale(1.1) rotate(2deg);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.tab-button.active {
+  background: #1db954;
+  color: #fff;
+}

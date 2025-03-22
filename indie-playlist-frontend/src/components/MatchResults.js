@@ -1,42 +1,34 @@
-import React, { useState, useEffect } from "react";
+// MatchResults.js
+import React from 'react';
+import './MatchResults.css';
 
-const MatchResults = ({ trackId }) => {
-  const [matchData, setMatchData] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchMatchScore = async () => {
-      if (!trackId) return;
-      setLoading(true);
-      try {
-        const response = await fetch(`https://your-backend.onrender.com/api/tracks/match/${trackId}`);
-        const data = await response.json();
-        setMatchData(data);
-      } catch (err) {
-        setError("Error fetching match score");
-      }
-      setLoading(false);
-    };
-
-    fetchMatchScore();
-  }, [trackId]);
-
+const MatchResults = ({ results }) => {
   return (
-    <div>
-      <h3>AI Match Score</h3>
-      {loading && <p>Loading...</p>}
-      {error && <p style={{ color: "red" }}>{error}</p>}
-      {matchData && (
-        <ul>
-          {matchData.map((match, index) => (
-            <li key={index}>
-              Curator ID: {match.curatorId}, Match Score: {match.score}%
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
+    <section className="match-results">
+      <div className="container">
+        <h2>Your Playlist Matches</h2>
+        {results && results.length > 0 ? (
+          <ul>
+            {results.map((result, index) => (
+              <li key={index} className="match-item">
+                <h3>{result.playlistName}</h3>
+                <p>{result.description}</p>
+                <a 
+                  href={result.link} 
+                  className="btn btn-secondary" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  Listen Now
+                </a>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p>No matches found. Try uploading a new track!</p>
+        )}
+      </div>
+    </section>
   );
 };
 

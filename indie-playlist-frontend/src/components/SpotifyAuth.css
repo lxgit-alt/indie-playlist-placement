@@ -1,0 +1,43 @@
+/* src/components/SpotifyAuth.css */
+.spotify-auth {
+    text-align: center;
+    padding: 40px 20px;
+    background: #f7f7f7;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 40px auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .spotify-auth h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+  }
+  
+  .spotify-auth p {
+    margin-bottom: 30px;
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .btn {
+    background: #1db954;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .btn:hover {
+    background: #17a44d;
+  }
+  

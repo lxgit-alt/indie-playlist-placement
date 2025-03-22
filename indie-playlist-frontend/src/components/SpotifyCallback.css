@@ -1,0 +1,17 @@
+/* SpotifyCallback.css */
+.spotify-callback {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #34495E;
+    color: #ECF0F1;
+  }
+  
+  .spotify-callback h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .spotify-callback p {
+    font-size: 1.2rem;
+  }
+  

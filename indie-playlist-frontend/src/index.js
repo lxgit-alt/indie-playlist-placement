@@ -1,31 +1,28 @@
-import './global.css';
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { Auth0Provider } from '@auth0/auth0-react';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import App from "./App";
+import { AuthProvider } from "./context/AuthContext";
+import "./index.css";
+import { initializePaddle } from "@paddle/paddle-js";
+import "./firebase-config"; // Ensure this file correctly initializes Firebase
 
-const domain = process.env.REACT_APP_AUTH0_DOMAIN;
-const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
+// Initialize Paddle with the correct Vendor ID (Replace with your actual Paddle Vendor ID)
+initializePaddle({ seller: "219004" });
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <Auth0Provider
-      domain={domain}
-      clientId={clientId}
-      authorizationParams={{ redirect_uri: window.location.origin }}
-    >
-      <Router>
-        <App />
-      </Router>
-    </Auth0Provider>
-  </React.StrictMode>
-);
+const rootElement = document.getElementById("root");
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+if (rootElement) {
+  const root = ReactDOM.createRoot(rootElement);
+  root.render(
+    <React.StrictMode>
+      <AuthProvider>
+        <BrowserRouter> {/* Wrap App with BrowserRouter */}
+          <App />
+        </BrowserRouter>
+      </AuthProvider>
+    </React.StrictMode>
+  );
+} else {
+  console.error("Root element not found!");
+}

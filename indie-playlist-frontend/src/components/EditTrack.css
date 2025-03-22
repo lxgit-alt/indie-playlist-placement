@@ -1,0 +1,67 @@
+/* src/components/EditTrack.css */
+.edit-track {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: #fff;
+  }
+  
+  .edit-track h2 {
+    color: #ffce32;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .edit-track-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .edit-track-form label {
+    margin-top: 10px;
+    font-size: 1rem;
+  }
+  
+  .edit-track-form input {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ffce32;
+    border-radius: 5px;
+    background: #000;
+    color: #fff;
+  }
+  
+  .edit-track-form .btn {
+    margin-top: 15px;
+    padding: 10px;
+    background: #1d63ff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .edit-track-form .btn:hover {
+    background: #1453d1;
+  }
+  
+  .delete-btn {
+    margin-top: 15px;
+    background: #ff4d4f;
+  }
+  
+  .delete-btn:hover {
+    background: #ff7875;
+  }
+  
+  .success-message {
+    color: #00ff00;
+    text-align: center;
+    margin-top: 10px;
+  }
+  

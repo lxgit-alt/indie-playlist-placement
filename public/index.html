@@ -1,74 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <!-- SEO Meta Description -->
-    <meta name="description" content="Submit your indie music tracks for review and get featured in top Spotify playlists." />
+    <!-- 🔹 Title & Meta Description -->
+    <title>Indie Playlist Placement – Get Your Music on Spotify Playlists</title>
+    <meta name="description" content="Submit your songs to top independent curators and get featured on Spotify playlists. Connect with playlist curators and grow your audience." />
+    
+    <!-- 🔹 Canonical Tag (Avoid Duplicate Content) -->
+    <link rel="canonical" href="https://www.indieplaylistplacement.com/" />
 
-    <!-- Social Media Preview Cards -->
-    <meta property="og:title" content="Indie Playlist Placement - Get Your Music Heard!" />
-    <meta property="og:description" content="Submit your indie tracks for review by Spotify playlist curators." />
-    <meta property="og:image" content="https://indie-playlist-placement.onrender.com/banner.jpg" />
-    <meta property="og:url" content="https://indie-playlist-placement.onrender.com" />
+    <!-- 🔹 Robots Meta Tag (Indexing & SEO) -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- 🔹 Open Graph Tags (For Social Media Sharing) -->
+    <meta property="og:title" content="Indie Playlist Placement – Get Your Music on Spotify Playlists" />
+    <meta property="og:description" content="Submit your songs to top independent curators and get featured on Spotify playlists. Connect with playlist curators and grow your audience." />
+    <meta property="og:image" content="https://www.indieplaylistplacement.com/og-image.jpg" />
+    <meta property="og:url" content="https://www.indieplaylistplacement.com/" />
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Indie Playlist Placement" />
 
+    <!-- 🔹 Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Indie Playlist Placement" />
-    <meta name="twitter:description" content="Submit your indie tracks for playlist review and get discovered!" />
-    <meta name="twitter:image" content="https://indie-playlist-placement.onrender.com/banner.jpg" />
+    <meta name="twitter:title" content="Indie Playlist Placement – Get Your Music on Spotify Playlists" />
+    <meta name="twitter:description" content="Submit your songs to top independent curators and get featured on Spotify playlists. Connect with playlist curators and grow your audience." />
+    <meta name="twitter:image" content="https://www.indieplaylistplacement.com/twitter-image.jpg" />
 
-    <!-- Structured Data for Google Search -->
+    <!-- 🔹 JSON-LD Structured Data for Music & Artists -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "MusicEvent",
-      "name": "Indie Playlist Placement",
-      "description": "Submit your indie music tracks to be reviewed by playlist curators.",
-      "url": "https://indie-playlist-placement.onrender.com",
-      "startDate": "2025-01-01T20:00:00Z",
-      "eventStatus": "https://schema.org/EventScheduled",
-      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
-      "location": {
-        "@type": "VirtualLocation",
-        "url": "https://indie-playlist-placement.onrender.com"
-      },
-      "organizer": {
-        "@type": "Organization",
+      {
+        "@context": "https://schema.org",
+        "@type": "MusicGroup",
         "name": "Indie Playlist Placement",
-        "url": "https://indie-playlist-placement.onrender.com"
-      },
-      "performer": [
-        {
-          "@type": "MusicGroup",
-          "name": "Various Indie Artists"
-        }
-      ],
-      "offers": [
-        {
-          "@type": "Offer",
-          "url": "https://indie-playlist-placement.onrender.com",
-          "price": "0",
-          "priceCurrency": "USD",
-          "availability": "https://schema.org/InStock",
-          "validFrom": "2025-01-01T00:00:00Z",
-          "availabilityStarts": "2025-01-01T00:00:00Z"
-        }
-      ]
-    }
+        "url": "https://www.indieplaylistplacement.com/",
+        "description": "Submit your songs to top independent curators and get featured on Spotify playlists.",
+        "image": "https://www.indieplaylistplacement.com/logo.png",
+        "sameAs": [
+          "https://www.facebook.com/IndiePlaylistPlacement",
+          "https://www.twitter.com/IndiePlaylistPlacement",
+          "https://www.instagram.com/IndiePlaylistPlacement"
+        ]
+      }
     </script>
 
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!-- 🔹 Breadcrumbs Schema (Enhance Navigation) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.indieplaylistplacement.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Submit Music",
+            "item": "https://www.indieplaylistplacement.com/submit"
+          }
+        ]
+      }
+    </script>
+
+    <!-- 🔹 Favicon & Apple Touch Icons -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!-- 🔹 Theme Color for Mobile Browsers -->
+    <meta name="theme-color" content="#1D63FF" />
+
+    <!-- 🔹 Performance Optimization: Preload Fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" as="style" />
     
-    <title>Indie Playlist Placement - Get Your Music Heard!</title>
+    <!-- 🔹 Main Styles -->
+    <link rel="stylesheet" href="%PUBLIC_URL%/styles.css" />
   </head>
-  
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    
+    <!-- 🔹 Paddle Script Integration -->
+    <script src="https://cdn.paddle.com/paddle/paddle.js"></script>
+    <script>
+      Paddle.Setup({ vendor: "219004" }); // Replace "123456" with your actual Paddle Vendor ID
+    </script>
   </body>
 </html>

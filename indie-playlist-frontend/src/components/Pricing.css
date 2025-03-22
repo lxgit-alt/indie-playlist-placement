@@ -1,0 +1,91 @@
+/* src/components/Pricing.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+.pricing-page {
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  min-height: 100vh;
+  background: url('../assets/pricing-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+}
+
+.pricing-page::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+.pricing-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.pricing-header h1 {
+  font-size: 2.8rem;
+  margin: 0;
+}
+
+.pricing-header p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.pricing-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.pricing-card {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.pricing-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.pricing-card p {
+  font-size: 1.1rem;
+  margin: 8px 0;
+}
+
+.btn {
+  display: inline-block;
+  background: #1db954;
+  color: #fff;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #1aa34a;
+}
+
+.loading {
+  font-size: 1.5rem;
+  margin-top: 50px;
+}

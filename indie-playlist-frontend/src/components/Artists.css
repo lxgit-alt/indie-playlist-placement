@@ -1,0 +1,21 @@
+/* src/components/Artists.css */
+.artists {
+    padding: 60px 20px;
+    background: #f7f7f7;
+    text-align: center;
+  }
+  
+  .artist-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .artist-gallery img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  

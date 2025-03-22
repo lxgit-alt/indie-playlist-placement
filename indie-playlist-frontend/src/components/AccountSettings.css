@@ -1,0 +1,90 @@
+/* src/components/AccountSettings.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+.account-settings {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 8px;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+
+.account-settings h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.settings-section {
+  margin-bottom: 30px;
+}
+
+.settings-section h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #1db954;
+  padding-bottom: 5px;
+}
+
+.settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.settings-form label {
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.settings-form input,
+.settings-form textarea {
+  padding: 10px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background: #222;
+  color: #fff;
+  margin-top: 5px;
+}
+
+.connected-accounts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.account-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: #333;
+  border-radius: 5px;
+}
+
+.btn {
+  padding: 10px 15px;
+  background: #1db954;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  background: #17a44d;
+}
+
+.btn.secondary {
+  background: #555;
+}
+
+.connected-accounts .btn {
+  font-size: 0.9rem;
+}

@@ -1,0 +1,42 @@
+.track-management table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .track-management th,
+  .track-management td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .track-management .error {
+    color: red;
+  }
+  
+  /* Modal styling */
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: #fff;
+    padding: 20px;
+    width: 300px;
+    border-radius: 8px;
+  }
+  
+  .modal-buttons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  

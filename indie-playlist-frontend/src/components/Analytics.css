@@ -1,0 +1,36 @@
+/* src/components/Analytics.css */
+.analytics {
+  max-width: 900px;
+  margin: 20px auto;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 20px;
+  border-radius: 8px;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+.analytics h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.analytics-widgets {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.widget {
+  flex: 1 1 200px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.widget h4 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}

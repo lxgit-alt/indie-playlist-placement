@@ -1,64 +1,35 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React from 'react';
+import './CuratorReview.css';
 
 const CuratorReview = () => {
-  const [tracks, setTracks] = useState([]);
-  const [feedback, setFeedback] = useState({});
-
-  useEffect(() => {
-    fetchTracks();
-  }, []);
-
-  const fetchTracks = async () => {
-    try {
-      const response = await axios.get(`${process.env.REACT_APP_API_URL}/curator/review`);
-      setTracks(response.data);
-    } catch (error) {
-      console.error('Error fetching tracks:', error);
-    }
-  };
-
-  const handleFeedbackChange = (trackId, event) => {
-    setFeedback({ ...feedback, [trackId]: event.target.value });
-  };
-
-  const submitFeedback = async (trackId, accepted) => {
-    try {
-      await axios.post(`${process.env.REACT_APP_API_URL}/curator/review/${trackId}`, {
-        feedback: feedback[trackId] || '',
-        accepted,
-      });
-      alert('Feedback submitted!');
-      fetchTracks(); // Refresh the list
-    } catch (error) {
-      console.error('Error submitting feedback:', error);
-    }
-  };
+  // Example reviews data
+  const reviews = [
+    {
+      id: 1,
+      curatorName: 'Curator One',
+      review: 'Your track has great potential! Consider focusing on your hook for better engagement.',
+    },
+    {
+      id: 2,
+      curatorName: 'Curator Two',
+      review: 'Excellent sound quality and originality. Keep up the good work!',
+    },
+  ];
 
   return (
-    <div className="curator-review-container">
-      <h2>Curator Review Panel</h2>
-      {tracks.length === 0 ? (
-        <p>No tracks available for review.</p>
-      ) : (
-        tracks.map((track) => (
-          <div key={track.id} className="track-card">
-            <h3>{track.trackName} - {track.artist}</h3>
-            <audio controls>
-              <source src={`${process.env.REACT_APP_API_URL}/${track.filePath}`} type="audio/mp3" />
-              Your browser does not support the audio tag.
-            </audio>
-            <textarea
-              placeholder="Leave feedback..."
-              value={feedback[track.id] || ''}
-              onChange={(event) => handleFeedbackChange(track.id, event)}
-            />
-            <button onClick={() => submitFeedback(track.id, true)}>Approve</button>
-            <button onClick={() => submitFeedback(track.id, false)}>Reject</button>
-          </div>
-        ))
-      )}
-    </div>
+    <section className="curator-review">
+      <div className="container">
+        <h2>Curator Reviews</h2>
+        <div className="reviews-list">
+          {reviews.map((review) => (
+            <div key={review.id} className="review-card">
+              <h3>{review.curatorName}</h3>
+              <p>{review.review}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
 

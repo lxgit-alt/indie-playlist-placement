@@ -1,0 +1,31 @@
+/* src/components/HelpSection.css */
+.help-section {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 20px;
+    border-radius: 8px;
+    color: #fff;
+    margin: 20px auto;
+    max-width: 600px;
+  }
+  
+  .help-section h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #1db954;
+    padding-bottom: 5px;
+  }
+  
+  .setting-item {
+    margin-bottom: 15px;
+  }
+  
+  .setting-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  
+  .setting-item p {
+    font-size: 1rem;
+    margin: 0;
+  }
+  

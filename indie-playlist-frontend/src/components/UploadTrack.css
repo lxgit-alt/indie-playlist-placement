@@ -1,53 +1,54 @@
-.upload-container {
-    max-width: 500px;
-    margin: 30px auto;
-    padding: 20px;
-    background: #f9f5ec;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  .upload-container h3 {
-    font-family: 'Orbitron', sans-serif;
-    color: #d97706;
-    margin-bottom: 20px;
-  }
-  
-  .upload-container form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .upload-container label {
-    font-weight: bold;
-    margin: 10px 0 5px;
-  }
-  
-  .upload-container input {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .upload-container button {
-    margin-top: 15px;
-    padding: 10px;
-    background: linear-gradient(45deg, #ff00ff, #00ffff);
-    color: white;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .upload-container button:hover {
-    background: linear-gradient(45deg, #00ffff, #ff00ff);
-  }
-  
-  .upload-container p {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #333;
-  }
-  
+/* src/components/UploadTrack.css */
+.upload-track {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 8px;
+  color: #fff;
+}
+
+.upload-track h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.upload-track-form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-size: 1.1rem;
+}
+
+.upload-track-form input[type="text"],
+.upload-track-form input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  background: #333;
+  color: #fff;
+}
+
+.upload-track-form .btn {
+  width: 100%;
+  padding: 12px;
+  background: #1db954;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.upload-track-form .btn:hover {
+  background: #17a44d;
+}
+
+.success-message {
+  color: #1db954;
+  text-align: center;
+  margin-top: 15px;
+}
