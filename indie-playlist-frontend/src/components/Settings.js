@@ -50,7 +50,10 @@ const Settings = () => {
           </button>
         </nav>
         <div className="settings-content">
-          {sections[activeSection]}
+          {/* Wrap the content in a scrollable container */}
+          <div className="settings-scroll">
+            {sections[activeSection]}
+          </div>
         </div>
       </div>
     </div>
