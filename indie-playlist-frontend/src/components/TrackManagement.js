@@ -4,7 +4,7 @@ import axios from 'axios';
 import './TrackManagement.css';
 
 const TrackManagement = () => {
-  const [tracks, setTracks] = useState([]);
+  const [tracks, setTracks] = useState([]); // default as an empty array
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const [editModalOpen, setEditModalOpen] = useState(false);
@@ -18,9 +18,13 @@ const TrackManagement = () => {
     try {
       setLoading(true);
       const response = await axios.get('/api/tracks'); // Uses the proxy if set in package.json
-      setTracks(response.data.tracks);
+      // Defensive check: if response.data.tracks is not an array, default to an empty array
+      const fetchedTracks = Array.isArray(response.data.tracks) ? response.data.tracks : [];
+      setTracks(fetchedTracks);
+      console.log("Fetched tracks:", fetchedTracks);
       setLoading(false);
     } catch (err) {
+      console.error('Error fetching tracks:', err);
       setError('Error fetching tracks');
       setLoading(false);
     }

@@ -1,12 +1,9 @@
 // src/components/AITrackMatching.js
 import React, { useState } from "react";
+import axios from "axios";
 import "./AITrackMatching.css";
 
-// Define sample options for genre and mood
-const genres = ["Rock", "Pop", "Hip-Hop", "Jazz", "Electronic", "Indie"];
-const moods = ["Happy", "Sad", "Energetic", "Calm", "Angry", "Melancholic"];
-
-const AITrackMatching = () => {
+function AITrackMatching() {
   const [trackDetails, setTrackDetails] = useState({
     title: "",
     genre: "",
@@ -29,14 +26,19 @@ const AITrackMatching = () => {
     setLoading(true);
     setError("");
     setSuggestion("");
+
     try {
-      // Simulate an API call delay for generating a suggestion.
-      setTimeout(() => {
-        setSuggestion("This is an AI-generated pitch suggestion for your track!");
-        setLoading(false);
-      }, 1500);
+      // Post track details to your backend AI endpoint
+      const response = await axios.post(
+        "/api/ai-track-matching",
+        trackDetails
+      );
+      // Expect the backend to return { suggestion: "Custom pitch..." }
+      setSuggestion(response.data.suggestion);
     } catch (err) {
+      console.error("Error generating suggestion:", err);
       setError("Error generating suggestion. Please try again.");
+    } finally {
       setLoading(false);
     }
   };
@@ -46,7 +48,7 @@ const AITrackMatching = () => {
       <h2>AI Track Matching</h2>
       <p>Enter your track details to receive an AI-generated pitch suggestion.</p>
       <form onSubmit={handleSubmit} className="ai-form">
-        <label htmlFor="title">Track Title</label>
+        <label htmlFor="title">Track Title:</label>
         <input
           type="text"
           id="title"
@@ -56,37 +58,27 @@ const AITrackMatching = () => {
           onChange={handleChange}
           required
         />
-        <label htmlFor="genre">Genre</label>
-        <select
+        <label htmlFor="genre">Genre:</label>
+        <input
+          type="text"
           id="genre"
           name="genre"
+          placeholder="Enter genre"
           value={trackDetails.genre}
           onChange={handleChange}
           required
-        >
-          <option value="">Select a genre</option>
-          {genres.map((genre) => (
-            <option key={genre} value={genre}>
-              {genre}
-            </option>
-          ))}
-        </select>
-        <label htmlFor="mood">Mood</label>
-        <select
+        />
+        <label htmlFor="mood">Mood:</label>
+        <input
+          type="text"
           id="mood"
           name="mood"
+          placeholder="Enter mood"
           value={trackDetails.mood}
           onChange={handleChange}
           required
-        >
-          <option value="">Select a mood</option>
-          {moods.map((mood) => (
-            <option key={mood} value={mood}>
-              {mood}
-            </option>
-          ))}
-        </select>
-        <label htmlFor="lyricsSnippet">Lyrics Snippet</label>
+        />
+        <label htmlFor="lyricsSnippet">Lyrics Snippet:</label>
         <textarea
           id="lyricsSnippet"
           name="lyricsSnippet"
@@ -109,6 +101,6 @@ const AITrackMatching = () => {
       )}
     </div>
   );
-};
+}
 
 export default AITrackMatching;
